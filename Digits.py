@@ -60,7 +60,7 @@ neural_net.set_layers(configuration)
 # Begin the training 85% train accuracy in 100 epoch
 neural_net.train(X_train, y_train, epochs=100, log=True)
 
-# Evaluate our model on data that hasn't been used to test the model. Notice the difference in accuracy.
+# Evaluate our model on data that hasn't been used to train the model. Notice the difference in accuracy.
 Y_test_hat, _ = neural_net.multilayer_forward_propagation(np.transpose(X_test))
 
 # Recall that our data and target arrays are transposed inside the train  method, so Y_test_hat is outputted transposed.
