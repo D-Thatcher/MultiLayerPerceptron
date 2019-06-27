@@ -1,7 +1,7 @@
 # MultiLayerPerceptron
 A library developed to train deep neural nets written from scratch
 
-References
+##References
 
 (1) Kingma, Diederik P., and Jimmy Ba. “Adam: A Method for Stochastic Optimization.” ArXiv.org, 30 Jan. 2017, arxiv.org/abs/1412.6980.<br>
 (2) Skalski, Piotr. “Let's Code a Neural Network in Plain NumPy.” Towards Data Science, Towards Data Science, 12 Oct. 2018, towardsdatascience.com/lets-code-a-neural-network-in-plain-numpy-ae7e74410795.
