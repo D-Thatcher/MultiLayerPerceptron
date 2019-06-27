@@ -11,6 +11,7 @@ A library developed to train deep neural nets written from scratch.
 
  - Two Optimizers: Adam Stochastic Optimization and Regular Gradient Descent
  - Common activation functions and their derivatives for backpropagation: RELU, ELU, Leaky RELU, Sigmoid
+ - Xavier initialization
  - The final layer maps to probablities using Softmax, and the Cross Entropy is minimized
  - Option for Gradient Clipping
  - Arbitrary number of layers and neurons in each layer
@@ -53,6 +54,8 @@ You'll notice two plots appear (one after the other), allowing us to visualize t
 ![alt text](https://github.com/D-Thatcher/MultiLayerPerceptron/blob/master/entropy_final.png)
 
 ### References
+
+* Glorot, Xavier, and Yoshua Bengio. Understanding the Difficulty of Training Deep Feedforward Neural Networks. 2010, proceedings.mlr.press/v9/glorot10a/glorot10a.pdf.<br>
 
 * Kingma, Diederik P., and Jimmy Ba. “Adam: A Method for Stochastic Optimization.” ArXiv.org, 30 Jan. 2017, arxiv.org/abs/1412.6980.<br>
 
