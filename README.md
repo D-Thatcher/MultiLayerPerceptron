@@ -55,7 +55,7 @@ You'll notice two plots appear (one after the other), allowing us to visualize t
 
 ### References
 
-* Glorot, Xavier, and Yoshua Bengio. Understanding the Difficulty of Training Deep Feedforward Neural Networks. 2010, proceedings.mlr.press/v9/glorot10a/glorot10a.pdf.<br>
+* Glorot, Xavier, and Yoshua Bengio. "Understanding the Difficulty of Training Deep Feedforward Neural Networks." 2010, proceedings.mlr.press/v9/glorot10a/glorot10a.pdf.<br>
 
 * Kingma, Diederik P., and Jimmy Ba. “Adam: A Method for Stochastic Optimization.” ArXiv.org, 30 Jan. 2017, arxiv.org/abs/1412.6980.<br>
 
