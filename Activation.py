@@ -8,6 +8,10 @@ def softmax(Z):
 def sigmoid(Z):
     return 1/(1+np.exp(-Z))
 
+# Todo: add swish_backward
+def swish(Z):
+    return np.multiply(Z, sigmoid(Z))
+
 def relu(Z):
     return np.maximum(0,Z)
 
