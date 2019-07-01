@@ -42,7 +42,7 @@ class AdamOptimizer:
         assert len(state) == 3, "Unexpected number of state keys: "+ str(list(state.keys()))
         self.iterations, self.M, self.R = state["iterations"], state["M"], state["R"]
         
-    def initialize_M_R(self):
+    def initialize_M_R(self, params):
         self.M = [np.zeros(params[p].shape) for p in params]
         self.R = [np.zeros(params[p].shape) for p in params]
 
@@ -62,7 +62,7 @@ class AdamOptimizer:
                      (1. - np.power(self.beta_1, t)))
 
         if (self.M is None) or (self.R is None):
-            self.initialize_M_R()
+            self.initialize_M_R(params)
 
         ret = {}
 
