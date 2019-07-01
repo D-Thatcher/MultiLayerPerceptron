@@ -31,6 +31,20 @@ class AdamOptimizer:
         self.epsilon = epsilon
         self.initial_decay = decay
         self.gradient_clip = gradient_clip
+        
+        self.M = None
+        self.R = None
+    
+    def pull_state(self):
+        return {"iterations":self.iterations, "M":self.M, "R":self.R}
+
+    def push_state(self, state):
+        assert len(state) == 3, "Unexpected number of state keys: "+ str(list(state.keys()))
+        self.iterations, self.M, self.R = state["iterations"], state["M"], state["R"]
+        
+    def initialize_M_R(self):
+        self.M = [np.zeros(params[p].shape) for p in params]
+        self.R = [np.zeros(params[p].shape) for p in params]
 
     def __call__(self, params, grads):
 
@@ -47,9 +61,8 @@ class AdamOptimizer:
         lr_t = learning_rate * (np.sqrt(1. - np.power(self.beta_2, t)) /
                      (1. - np.power(self.beta_1, t)))
 
-        if not hasattr(self, 'ms'):
-            self.M = [np.zeros(params[p].shape) for p in params]
-            self.R = [np.zeros(params[p].shape) for p in params]
+        if (self.M is None) or (self.R is None):
+            self.initialize_M_R()
 
         ret = {}
 
@@ -68,13 +81,6 @@ class AdamOptimizer:
         self.iterations += 1
 
         return ret
-
-    def pull_state(self):
-        return {"iterations":self.iterations, "M":self.M, "R":self.R}
-
-    def push_state(self, state):
-        assert len(state) == 3, "Unexpected number of state keys: "+ str(list(state.keys()))
-        self.iterations, self.M, self.R = state["iterations"], state["M"], state["R"]
 
 
 
