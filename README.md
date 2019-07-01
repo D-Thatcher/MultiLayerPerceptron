@@ -10,7 +10,7 @@ A library developed to train deep neural nets written from scratch.
 ### Features
 
  - Two Optimizers: Adam Stochastic Optimization and Regular Gradient Descent
- - Common activation functions and their derivatives for backpropagation: RELU, ELU, Leaky RELU, Sigmoid
+ - Common activation functions and their derivatives for backpropagation: RELU, ELU, Swish, Leaky RELU, Sigmoid
  - Xavier initialization
  - The final layer maps to probablities using Softmax, and the Cross Entropy is minimized
  - Option for Gradient Clipping
